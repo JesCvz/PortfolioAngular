@@ -1,0 +1,12 @@
+<div (click)="toggleMenu()">
+    <ng-content></ng-content>
+</div>
+
+@if (isMenuOpen) {
+    <div class="menu-popup">
+        <div class="menu-arrow"></div>
+        <p>Toggle Theme</p>
+        <span><mat-slide-toggle></mat-slide-toggle></span>
+        
+    </div>
+}

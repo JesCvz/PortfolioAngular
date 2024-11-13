@@ -1,0 +1,14 @@
+<nav>
+    <ul>
+        @for (route of routes; track route.path) {
+            <li>
+                <a href='/{{route.path}}'>
+                    {{route.name}}
+                </a>
+            </li>
+        }
+    </ul>
+    <app-menu-bar>
+        <img alt="profile picture" src="https://github.com/JesCvz.png"/>
+    </app-menu-bar>
+</nav>
