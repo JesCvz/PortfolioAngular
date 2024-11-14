@@ -1,9 +1,9 @@
-<nav>
-    @if (!isMobile) {
+<nav [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
+    @if (true) {
         <ul>
             @for (route of routes; track route.path) {
                 <li>
-                    <a href='/{{route.path}}'>
+                    <a routerLink='/{{route.path}}'>
                         {{route.name}}
                     </a>
                 </li>
@@ -11,12 +11,12 @@
         </ul>
     }@else{
         <button>
-            <mat-icon class="white-icon">menu</mat-icon>
+            <mat-icon class="icon" [ngClass]="{'white-icon': isDarkMode, 'dark-icon': !isDarkMode}">menu</mat-icon>
         </button>
-        <app-side-bar-menu></app-side-bar-menu>
+        <app-side-bar-menu [darkMode]="isDarkMode"></app-side-bar-menu>
     }
     
-    <app-menu-bar>
+    <app-menu-bar [darkMode]="isDarkMode">
         <img alt="profile picture" src="https://github.com/JesCvz.png"/>
     </app-menu-bar>
 </nav>

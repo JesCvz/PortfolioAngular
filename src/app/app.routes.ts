@@ -14,6 +14,6 @@ type RoutesCustom = CustomRoute[];
 export const routes: RoutesCustom = [
     {path: 'home', name: 'Home', component: HomeViewComponent},
     {path: 'experience', name: 'Professional Experience', component: ExperienceViewComponent},
-    {path: 'aboutme', name: 'About Me', component: AboutViewComponent},
+    {path: 'about', name: 'About', component: AboutViewComponent},
     {path: 'challenges', name: 'Coding Challenges', component: ChallengesViewComponent}
 ];

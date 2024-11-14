@@ -1,6 +1,9 @@
 :root{
     color-scheme: light;
-    background-color: rgba(0, 0, 0, 0.3);
+    --text-color-dark: #000;
+    --text-color-light: #fff;
+    --background-color-dark: #2c2c2c;
+    --background-color-light: #ececec;
 }
 
 html, body { height: 100%; }
@@ -11,5 +14,4 @@ body {
 
 .dark {
     color-scheme: dark;
-    background-color: rgba(255, 255, 255, 0.05);
 }

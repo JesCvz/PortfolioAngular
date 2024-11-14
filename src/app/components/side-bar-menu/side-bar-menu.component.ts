@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar-menu',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './side-bar-menu.component.css'
 })
 export class SideBarMenuComponent {
+  @Input() darkMode = false;
 
 }
