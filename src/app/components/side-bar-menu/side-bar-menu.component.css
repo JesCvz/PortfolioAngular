@@ -1,0 +1,11 @@
+div{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 80vW;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.05);
+    height: calc(100vH - 60px);
+}
