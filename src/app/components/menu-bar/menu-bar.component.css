@@ -1,3 +1,9 @@
+.ProjectedContent{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
 .menu-popup{
     display: flex;
     align-items: center;
@@ -7,12 +13,13 @@
     background-color: rgba(0, 0, 0, 0.20);
     padding: 10px;
     border-radius: 10px;
+    z-index: 1;
 }
 
 .menu-popup .menu-arrow::after {
     content: "";
     position: absolute;
-    top: -39%;
+    top: -36%;
     left: 80%;
     margin-left: 5px;
     border-width: 10px;

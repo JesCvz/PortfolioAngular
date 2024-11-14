@@ -1,4 +1,4 @@
-<div (click)="toggleMenu()">
+<div class="ProjectedContent" (click)="toggleMenu()">
     <ng-content></ng-content>
 </div>
 
@@ -6,7 +6,6 @@
     <div class="menu-popup">
         <div class="menu-arrow"></div>
         <p>Toggle Theme</p>
-        <span><mat-slide-toggle></mat-slide-toggle></span>
-        
+        <span><mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onCheckedChange()"></mat-slide-toggle></span>
     </div>
 }
