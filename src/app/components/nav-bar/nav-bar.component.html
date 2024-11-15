@@ -13,10 +13,11 @@
         <button (click)="isSideBarOpen = !isSideBarOpen">
             <mat-icon class="icon" [ngClass]="{'white-icon': isDarkMode, 'dark-icon': !isDarkMode}">{{ isSideBarOpen ? 'close' : 'menu' }}</mat-icon>
         </button>
-        <app-side-bar-menu [isSideBarOpen]="isSideBarOpen" [darkMode]="isDarkMode"></app-side-bar-menu>
     }
     
     <app-menu-bar [darkMode]="isDarkMode">
         <img alt="profile picture" src="https://github.com/JesCvz.png"/>
     </app-menu-bar>
 </nav>
+<app-side-bar-menu [(isSideBarOpen)]="isSideBarOpen" [darkMode]="isDarkMode">   
+</app-side-bar-menu>

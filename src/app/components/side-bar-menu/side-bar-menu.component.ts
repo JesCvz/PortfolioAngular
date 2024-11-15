@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { MobileService } from '../../services/Mobile/mobile.service';
 
 @Component({
   selector: 'app-side-bar-menu',
@@ -11,4 +12,27 @@ import { Component, Input } from '@angular/core';
 export class SideBarMenuComponent {
   @Input() darkMode = false;
   @Input() isSideBarOpen = false;
+  @Output() isSideBarOpenChange = new EventEmitter<boolean>();
+  isMobile = false;
+
+  constructor(
+    private elementRef: ElementRef,
+    private isMobileService: MobileService
+  ){}
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent): void {
+    const targetElement = event.target as HTMLElement;
+    if (this.isSideBarOpen && !this.elementRef.nativeElement.contains(targetElement)) {
+      this.isSideBarOpen = false
+      this.isSideBarOpenChange.emit(this.isSideBarOpen);
+    }
+  }
+
+  ngOnInit(){
+    this.isMobileService.IsMobile$.subscribe(isMobile => {
+      this.isMobile = isMobile;
+    })
+  }
+
 }

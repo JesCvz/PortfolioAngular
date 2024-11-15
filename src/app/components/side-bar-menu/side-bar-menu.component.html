@@ -1,8 +1,6 @@
 
-@if (isSideBarOpen) {
-    <div class="sidebar" [ngClass]="{'dark-mode': darkMode , 'light-mode': !darkMode }">
-        hola mundo
-    </div>
-    <div class="backdrop">
-    </div>
-}
+<div class="sidebar" [ngClass]="{'dark-mode': darkMode , 'light-mode': !darkMode, 'hidden': !isSideBarOpen || !isMobile }">
+    hola mundo
+</div>
+<div class="backdrop" [ngClass]="{'hidden': !isSideBarOpen || !isMobile}">
+</div>
