@@ -4,16 +4,23 @@ import { ExperienceViewComponent } from './views/experience-view/experience-view
 import { AboutViewComponent } from './views/about-view/about-view.component';
 import { ChallengesViewComponent } from './views/challenges-view/challenges-view.component';
 
-
 type CustomRoute = Route & {
-    name: string;
-}
+  name: string;
+};
 
 type RoutesCustom = CustomRoute[];
 
 export const routes: RoutesCustom = [
-    {path: 'home', name: 'Home', component: HomeViewComponent},
-    {path: 'experience', name: 'Professional Experience', component: ExperienceViewComponent},
-    {path: 'challenges', name: 'Coding Challenges', component: ChallengesViewComponent},
-    {path: 'about', name: 'About', component: AboutViewComponent},
+  { path: 'home', name: 'Home', component: HomeViewComponent },
+  {
+    path: 'experience',
+    name: 'Professional Experience',
+    component: ExperienceViewComponent,
+  },
+  {
+    path: 'challenges',
+    name: 'Coding Challenges',
+    component: ChallengesViewComponent,
+  },
+  { path: 'about', name: 'About', component: AboutViewComponent },
 ];

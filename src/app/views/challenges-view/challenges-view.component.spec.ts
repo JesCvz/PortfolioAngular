@@ -8,9 +8,8 @@ describe('ChallengesViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ChallengesViewComponent]
-    })
-    .compileComponents();
+      imports: [ChallengesViewComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ChallengesViewComponent);
     component = fixture.componentInstance;

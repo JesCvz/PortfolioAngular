@@ -1,11 +1,22 @@
 <div class="ProjectedContent" (click)="toggleMenu()">
-    <ng-content></ng-content>
+  <ng-content></ng-content>
 </div>
 
 @if (isMenuOpen) {
-    <div class="menu-popup" [ngClass]="{'dark-mode': darkMode, 'light-mode': !darkMode}">
-        <div class="menu-arrow" [ngClass]="{'dark-mode': darkMode, 'light-mode': !darkMode}"></div>
-        <p>Toggle Theme</p>
-        <span><mat-slide-toggle [(ngModel)]="isChecked" (ngModelChange)="onCheckedChange()"></mat-slide-toggle></span>
-    </div>
+<div
+  class="menu-popup"
+  [ngClass]="{ 'dark-mode': darkMode, 'light-mode': !darkMode }"
+>
+  <div
+    class="menu-arrow"
+    [ngClass]="{ 'dark-mode': darkMode, 'light-mode': !darkMode }"
+  ></div>
+  <p>Toggle Theme</p>
+  <span
+    ><mat-slide-toggle
+      [(ngModel)]="isChecked"
+      (ngModelChange)="onCheckedChange()"
+    ></mat-slide-toggle
+  ></span>
+</div>
 }
