@@ -3,7 +3,9 @@
     --text-color-dark: #000;
     --text-color-light: #fff;
     --background-color-dark: #2c2c2c;
+    --background-color-dark-secondary: #3b3b3b;
     --background-color-light: #ececec;
+    --background-color-light-secondary: #e0e0e0;
 }
 
 html, body { height: 100%; }

@@ -12,6 +12,12 @@ export class DarkModeService {
 
   toggleDarkMode():void{
     this.darkModeSubject.next(!this.darkModeSubject.value);
+    localStorage.setItem('darkMode', this.darkModeSubject.value ? 'true' : 'false');
   }
 
+  setDarkMode(newValue:boolean): void{
+    this.darkModeSubject.next(newValue);
+    localStorage.setItem('darkMode', newValue.toString());
+  }
+ 
 }

@@ -22,6 +22,12 @@ export class MenuBarComponent {
   isChecked = false;
   isMenuOpen = false;
 
+  ngOnInit(){
+    this.darkModeService.darkMode$.subscribe(darkmode => {
+      this.isChecked = darkmode
+    })
+  }
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

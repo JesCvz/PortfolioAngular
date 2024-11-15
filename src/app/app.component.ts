@@ -4,6 +4,7 @@ import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { DarkModeService } from './services/DarkMode/dark-mode.service';
 import { Subscription } from 'rxjs';
+import { MobileService } from './services/Mobile/mobile.service';
 
 @Component({
   selector: 'app-root',
@@ -14,20 +15,30 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent {
   title = 'PortfolioAngular';
-  isMobile = false;
   isDarkMode = false;
   private subscriptions: Subscription = new Subscription();
   
   constructor(
     private viewportObserver: BreakpointObserver,
-    private darkModeService: DarkModeService
+    private darkModeService: DarkModeService,
+    private isMobileService: MobileService
   ){}
   
   ngOnInit(): void {
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode !== null) {
+      this.isDarkMode = savedDarkMode === 'true';
+      const root = document.querySelector(':root');
+      if(this.isDarkMode && root){
+        root.classList.toggle('dark');
+      }
+    }
+    this.darkModeService.setDarkMode(this.isDarkMode);
+
     const viewportSubscription = this.viewportObserver
       .observe(['(max-width: 800px)'])
       .subscribe((screenSize) => {
-        this.isMobile = screenSize.matches;
+        this.isMobileService.setIsMobile(screenSize.matches);
       });
 
     const darkModeSubscription = this.darkModeService.darkMode$.subscribe((darkMode) => {

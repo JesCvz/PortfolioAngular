@@ -1,5 +1,5 @@
 <nav [ngClass]="{ 'dark-mode': isDarkMode, 'light-mode': !isDarkMode }">
-    @if (true) {
+    @if (!isMobile) {
         <ul>
             @for (route of routes; track route.path) {
                 <li>
@@ -10,10 +10,10 @@
             }
         </ul>
     }@else{
-        <button>
-            <mat-icon class="icon" [ngClass]="{'white-icon': isDarkMode, 'dark-icon': !isDarkMode}">menu</mat-icon>
+        <button (click)="isSideBarOpen = !isSideBarOpen">
+            <mat-icon class="icon" [ngClass]="{'white-icon': isDarkMode, 'dark-icon': !isDarkMode}">{{ isSideBarOpen ? 'close' : 'menu' }}</mat-icon>
         </button>
-        <app-side-bar-menu [darkMode]="isDarkMode"></app-side-bar-menu>
+        <app-side-bar-menu [isSideBarOpen]="isSideBarOpen" [darkMode]="isDarkMode"></app-side-bar-menu>
     }
     
     <app-menu-bar [darkMode]="isDarkMode">
