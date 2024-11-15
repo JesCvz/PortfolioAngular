@@ -14,10 +14,15 @@
             <mat-icon class="icon" [ngClass]="{'white-icon': isDarkMode, 'dark-icon': !isDarkMode}">{{ isSideBarOpen ? 'close' : 'menu' }}</mat-icon>
         </button>
     }
-    
-    <app-menu-bar [darkMode]="isDarkMode">
-        <img alt="profile picture" src="https://github.com/JesCvz.png"/>
-    </app-menu-bar>
+    @defer(){
+        <app-menu-bar [darkMode]="isDarkMode">
+            <img alt="profile picture" src="https://github.com/JesCvz.png"/>
+        </app-menu-bar>
+    }@placeholder {
+        <div class="profile-picture-placeholder"></div>
+    }
 </nav>
-<app-side-bar-menu [(isSideBarOpen)]="isSideBarOpen" [darkMode]="isDarkMode">   
-</app-side-bar-menu>
+@defer (when isMobile) {
+    <app-side-bar-menu [(isSideBarOpen)]="isSideBarOpen" [darkMode]="isDarkMode">   
+    </app-side-bar-menu>
+}

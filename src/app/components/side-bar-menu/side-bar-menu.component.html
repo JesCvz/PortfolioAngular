@@ -1,6 +1,10 @@
 
 <div class="sidebar" [ngClass]="{'dark-mode': darkMode , 'light-mode': !darkMode, 'hidden': !isSideBarOpen || !isMobile }">
-    hola mundo
+    <mat-action-list role="list">
+        @for (route of routes; track route.path) {
+            <button mat-list-item (click)="handleRouteClick(route.path)"><span class="route-name" [ngClass]="{'dark-mode': darkMode , 'light-mode': !darkMode}">{{ route.name }}</span></button>
+        }
+    </mat-action-list>
 </div>
 <div class="backdrop" [ngClass]="{'hidden': !isSideBarOpen || !isMobile}">
 </div>

@@ -9,7 +9,7 @@
     height: calc(100vH - 60px);
     z-index: 0;
     transition-property: transform;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-timing-function: ease;
 }
 
@@ -25,6 +25,14 @@
     background-color: var(--background-color-dark-secondary)
 }
 
+.route-name.light-mode{
+    color: var(--text-color-dark);
+}
+
+.route-name.dark-mode{
+    color: var(--text-color-light);
+}
+
 .backdrop{
     position: absolute;
     height: 100vH;
@@ -34,7 +42,7 @@
     background-color: rgba(58, 58, 58, 0.363);
     z-index: -1;
     transition-property: opacity;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-timing-function: ease;
 }
 
