@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DarkModeService {
-  private darkModeSubject = new BehaviorSubject<boolean>(false);
+  private darkModeSubject = new BehaviorSubject<boolean>(true);
 
   darkMode$: Observable<boolean> = this.darkModeSubject.asObservable();
 

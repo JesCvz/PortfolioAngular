@@ -1,5 +1,20 @@
-<div>
-  <app-card>
-    <p>home-view works!</p>
-  </app-card>
+<div class="card-wrapper">
+  <div class="info">
+    <div>
+      <h2>Welcome!</h2>
+      <h1>My name is {{ information.name }}.</h1>
+      <h3>
+        And I am a
+        <span class="position">{{ information.position }} </span>
+        <a href="https://ascendion.com/" target="_blank" class="employer">
+          &#64;{{ information.currentEmployer }}.
+        </a>
+      </h3>
+      <p>
+        I've had the privilege of collaborating with esteemed companies
+        addressing large-scale, complex requests.
+      </p>
+    </div>
+    <img class="jesus-photo" src="assets/jesusnobg.png" />
+  </div>
 </div>

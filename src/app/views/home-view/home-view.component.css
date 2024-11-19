@@ -1,10 +1,38 @@
-div {
+.card-wrapper {
   position: relative;
-  z-index: -3;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 p {
   margin: 0px;
+  text-align: justify;
+  hyphens: auto;
+  max-width: 800px;
+}
+
+.info {
+  display: flex;
+  max-width: 70vw;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.jesus-photo {
+  width: 350px;
+  border-radius: 20%;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 60%, transparent 100%);
+}
+
+.position {
+  font-weight: 600;
+}
+
+.employer {
+  font-weight: 500;
+  color: rgb(48, 93, 243);
+  text-decoration: none;
 }
