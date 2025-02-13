@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './experience-view.component.html',
-  styleUrl: './experience-view.component.css'
+  styleUrl: './experience-view.component.css',
 })
-export class ExperienceViewComponent {
-
-}
+export class ExperienceViewComponent {}

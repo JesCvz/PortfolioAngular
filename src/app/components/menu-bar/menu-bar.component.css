@@ -1,53 +1,52 @@
-.ProjectedContent{
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+.ProjectedContent {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
-.menu-popup{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 70px;
-    left: calc(100vw - 190px);
-    padding: 10px;
-    border-radius: 10px;
-    z-index: 1;
+.menu-popup {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  left: calc(100vw - 190px);
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1;
 }
 
 .menu-popup .menu-arrow::after {
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: 80%;
-    margin-left: 5px;
-    border-width: 10px;
-    border-style: solid;
-  }
-
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 80%;
+  margin-left: 5px;
+  border-width: 10px;
+  border-style: solid;
+}
 
 .light-mode {
-    background-color: var(--background-color-light)
+  background-color: var(--background-color-light);
 }
 
 .dark-mode {
-    background-color: var(--background-color-dark)
+  background-color: var(--background-color-dark);
 }
- 
+
 .menu-popup.light-mode .menu-arrow::after {
-    border-color: transparent transparent var(--background-color-light) transparent;
+  border-color: transparent transparent var(--background-color-light)
+    transparent;
 }
 
 .menu-popup.dark-mode .menu-arrow::after {
-    border-color: transparent transparent var(--background-color-dark) transparent;
+  border-color: transparent transparent var(--background-color-dark) transparent;
 }
 
-
-span{
-    margin-left: 10px;
+span {
+  margin-left: 10px;
 }
 
-p{
-    margin: 0px;
-    font-size: 14px;
+p {
+  margin: 0px;
+  font-size: 14px;
 }
